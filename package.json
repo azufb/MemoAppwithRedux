@@ -1,0 +1,23 @@
+{
+  "name": "memoappwithredux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azufb/MemoAppwithRedux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azufb/MemoAppwithRedux/issues"
+  },
+  "homepage": "https://github.com/azufb/MemoAppwithRedux#readme",
+  "dependencies": {
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
+  }
+}
