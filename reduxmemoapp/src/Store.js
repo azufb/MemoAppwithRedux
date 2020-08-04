@@ -51,3 +51,20 @@ function deleteReduce(state, action) {
         fdata: []
     }
 }
+
+// メモ検索のレデュース処理
+function findReduce(state, action) {
+    let f = action.find;
+    let fdata = [];
+    state.data.forEach((value) => {
+        if (value.message.indexOf(f) >= 0) {
+            fdata.push(value); // indexOfは、引数と同じ内容の要素の最初のインデックスを返す。
+        }
+    });
+    return {
+        data: state.data,
+        message: 'find' + ':',
+        mode: 'find',
+        fdata: fdata
+    };
+}
