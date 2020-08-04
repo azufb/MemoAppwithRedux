@@ -49,7 +49,7 @@ function deleteReduce(state, action) {
         message: 'Delete' + action.index + ':',
         mode: 'delete',
         fdata: []
-    }
+    };
 }
 
 // メモ検索のレデュース処理
@@ -67,4 +67,31 @@ function findReduce(state, action) {
         mode: 'find',
         fdata: fdata
     };
+}
+
+// アクションクリエーター作成。dispatchで引数として渡すアクションを作成。
+// そのままdispatchなどで送信され、レデューサーによってそれぞれの処理を実行する。
+
+// メモ追加のアクション
+export function addMemo(text) {
+    return {
+        type: 'ADD',
+        message: text
+    }
+}
+
+// メモ削除のアクション。削除するメモのインデックス番号を渡して呼び出す。indexのnumは引数の番号。
+export function deleteMemo(num) {
+    return {
+        type: 'DELETE',
+        index: num
+    }
+}
+
+// メモ検索のアクション。検索テキストを渡して呼び出す。
+export function findMemo(text) {
+    return {
+        type: 'FIND',
+        find: text
+    }
 }
