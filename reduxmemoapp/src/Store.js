@@ -40,3 +40,14 @@ function addReduce(state, action) {
     };
 }
 
+// メモ削除のレデュース処理
+function deleteReduce(state, action) {
+    let newData = state.data.slice();
+    newData.splice(action.index, 1); // // spliceは要素の削除・置き換え。
+    return {
+        data: newData,
+        message: 'Delete' + action.index + ':',
+        mode: 'delete',
+        fdata: []
+    }
+}
