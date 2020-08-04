@@ -21,5 +21,22 @@ export function memoReducer(state = initData, action) {
     }
 }
 
-// 追加・削除・検索のレデューサー
+// 追加・削除・検索のレデュース処理(上記のcaseのreturn)
+
+// メモ追加のレデュース処理
+function addReduce(state, action) {
+    let data = {
+        message: action.message,
+        created: new Date()
+    };
+
+    let newData = state.data.slice(); // 配列のコピー
+    newData.unshift(data); // dataという連想配列をnewDataという連想配列の先頭に追加。
+    return {
+        data: newData, // dataが先頭に追加された後のnewData。
+        message: 'Added!',
+        mode: 'default',
+        fdata: []
+    };
+}
 
