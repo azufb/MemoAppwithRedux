@@ -8,6 +8,7 @@ import DelForm from './DelForm';
 
 class App extends Component {
   constructor(props) {
+    // 複数のclassを扱う時は、必要。
     super(props);
   }
 
