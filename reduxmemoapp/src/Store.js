@@ -95,3 +95,7 @@ export function findMemo(text) {
         find: text
     }
 }
+
+
+// ストアを作成
+export default createStore(memoReducer);
