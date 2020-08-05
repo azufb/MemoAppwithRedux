@@ -27,14 +27,14 @@ class AddForm extends Component {
 
     doChange(e) {
         this.setState({
-            message: e.target.value
+            message: e.target.value // 入力されたテキストをmessageステートに設定。
         });
     }
 
     doAction(e) {
         e.preventDefault();
         let action = addMemo(this.state.message);
-        this.props.dispatch(action);
+        this.props.dispatch(action); // actionをレデューサーに送る。
         this.setState({
             message: ''
         });
