@@ -54,7 +54,7 @@ class Item extends Component {
         let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 
         return (
-            <tr><th style={ this.th }>No. { this.props.index }</th>
+            <tr>
                 <td style={ this.td }>{ this.props.value.message }</td>
                 <td style={ this.date }>{ f }</td>
                 <td><input type="button" onClick={ this.handleDelete } value="Delete!" /></td>
