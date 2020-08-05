@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { deleteMemo } from './Store';
 
 class Item extends Component {
 
@@ -30,6 +31,24 @@ class Item extends Component {
         width: "80px"
     }
 
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            number: 0　// deleteMemoの引数は、number。
+        }
+        this.handleDelete = this.handleDelete.bind(this);
+    }
+    // 削除
+    handleDelete(e) {
+        e.preventDefault();
+        let action = deleteMemo(this.state.number);
+        this.props.dispatch(action);
+        this.setState({
+            number: 0
+        })
+    }
+
     render() {
         let d = this.props.value.created;
         let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
@@ -38,6 +57,7 @@ class Item extends Component {
             <tr><th style={ this.th }>No. { this.props.index }</th>
                 <td style={ this.td }>{ this.props.value.message }</td>
                 <td style={ this.date }>{ f }</td>
+                <td><input type="button" onClick={ this.handleDelete } value="Delete!" /></td>
             </tr>
         );
     }
