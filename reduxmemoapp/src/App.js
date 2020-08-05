@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './App.css';
 import Memo from './Memo';
 import AddForm from './AddForm';
-// import FindForm from './FindForm';
+import FindForm from './FindForm';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class App extends Component {
         <AddForm />
         <hr />
         <table><tbody><tr>
-          {/*<td><FindForm /></td>*/}
+          <td><FindForm /></td>
         </tr></tbody></table>
         <Memo />
       </div>
