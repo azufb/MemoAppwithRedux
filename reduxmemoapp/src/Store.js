@@ -63,7 +63,7 @@ function findReduce(state, action) {
     });
     return {
         data: state.data,
-        message: 'find' + ':',
+        message: 'Find:' + ' ' + f,
         mode: 'find',
         fdata: fdata
     };
