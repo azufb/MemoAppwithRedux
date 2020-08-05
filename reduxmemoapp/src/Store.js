@@ -69,6 +69,10 @@ function findReduce(state, action) {
     };
 }
 
+function editReduce(state, action) {
+
+}
+
 // アクションクリエーター作成。dispatchで引数として渡すアクションを作成。
 // そのままdispatchなどで送信され、レデューサーによってそれぞれの処理を実行する。
 
@@ -95,7 +99,6 @@ export function findMemo(text) {
         find: text
     }
 }
-
 
 // ストアを作成
 export default createStore(memoReducer);
