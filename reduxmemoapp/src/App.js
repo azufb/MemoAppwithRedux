@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import './App.css';
 import Memo from './Memo';
 import AddForm from './AddForm';
-import FindForm from './FindForm';
-import DelForm from './DelForm';
+// import FindForm from './FindForm';
+// import DelForm from './DelForm';
 
 class App extends Component {
   constructor(props) {
@@ -19,8 +19,8 @@ class App extends Component {
         <AddForm />
         <hr />
         <table><tbody><tr>
-          <td><FindForm /></td>
-          <td><DelForm /></td>
+          {/*<td><FindForm /></td>*/}
+          {/*<td><DelForm /></td>*/}
         </tr></tbody></table>
         <Memo />
       </div>
