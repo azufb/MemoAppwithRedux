@@ -46,7 +46,7 @@ function deleteReduce(state, action) {
     newData.splice(action.index, 1); // // spliceは要素の削除・置き換え。
     return {
         data: newData,
-        message: 'Delete' + action.index + ':',
+        message: 'Deleted!',
         mode: 'delete',
         fdata: []
     };
