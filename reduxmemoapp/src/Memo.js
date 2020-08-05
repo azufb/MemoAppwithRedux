@@ -3,26 +3,26 @@ import { connect } from 'react-redux';
 import Item from './Item';
 
 class Memo extends Component {
-
+    // 表示部分の作成
     render() {
         let data;
         let n = 0;
         switch (this.props.mode) {
             case 'default':
             data = this.props.data.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ } />
+                <Item key={ value.message } value={ value } />
             ));
             break;
 
             case 'find':
             data = this.props.fdata.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ } />
+                <Item key={ value.message } value={ value } />
             ));
             break;
 
             case 'delete':
             data = this.props.data.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ } />
+                <Item key={ value.message } value={ value } />
             ));
             break;
 
