@@ -52,6 +52,7 @@ class Item extends Component {
     render() {
         return (
             <tr>
+                <th style={ this.th }>{ this.props.index }</th>
                 <td style={ this.td }>{ this.props.value.message }</td>
                 <td style={ this.date }>{ this.props.value.created }</td>
                 <td><input type="button" onClick={ this.handleDelete } value="Delete!" /></td>
