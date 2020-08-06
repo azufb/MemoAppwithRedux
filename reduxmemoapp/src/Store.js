@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 // 初期値(ステートの値)の設定
 const initData = {
-    data: [{message: 'sample data', created: new Date()}],
+    data: [], // 空の配列。初期画面。
     mode: 'default',
     fdata: []
 };
@@ -25,9 +25,11 @@ export function memoReducer(state = initData, action) {
 
 // メモ追加のレデュース処理
 function addReduce(state, action) {
+    let d = new Date();
+    let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
     let data = {
         message: action.message,
-        created: new Date()
+        created: f
     };
 
     let newData = state.data.slice(); // 配列のコピー
