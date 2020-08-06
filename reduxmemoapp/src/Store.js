@@ -71,6 +71,11 @@ function findReduce(state, action) {
     };
 }
 
+// ジャンル選択のレデュース処理
+function selectionReduce(state, action) {
+
+}
+
 // アクションクリエーター作成。dispatchで引数として渡すアクションを作成。
 // そのままdispatchなどで送信され、レデューサーによってそれぞれの処理を実行する。
 

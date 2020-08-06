@@ -6,7 +6,7 @@ import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
 import './index.css';
 import App from './App';
-import MemoStore, { memoReducer } from './Store';
+import { memoReducer } from './Store';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { deleteMemo } from './Store';
 
 class Item extends Component {
 
@@ -37,7 +36,6 @@ class Item extends Component {
                 <th style={ this.th }>{ this.props.index }</th>
                 <td style={ this.td }>{ this.props.value.message }</td>
                 <td style={ this.date }>{ this.props.value.created }</td>
-
             </tr>
         );
     }
