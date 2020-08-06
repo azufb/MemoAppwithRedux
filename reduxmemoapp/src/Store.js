@@ -65,14 +65,10 @@ function findReduce(state, action) {
     });
     return {
         data: state.data,
-        message: 'Find:' + ' ' + f,
+        message: 'Find',
         mode: 'find',
         fdata: fdata
     };
-}
-
-function editReduce(state, action) {
-
 }
 
 // アクションクリエーター作成。dispatchで引数として渡すアクションを作成。
