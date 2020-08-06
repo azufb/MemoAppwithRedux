@@ -31,31 +31,13 @@ class Item extends Component {
         width: "80px"
     }
 
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            number: 0　// deleteMemoの引数は、number。
-        }
-        this.handleDelete = this.handleDelete.bind(this);
-    }
-    // 削除
-    handleDelete(e) {
-        e.preventDefault();
-        let action = deleteMemo(this.state.number);
-        this.props.dispatch(action);
-        this.setState({
-            number: 0
-        })
-    }
-
     render() {
         return (
             <tr>
                 <th style={ this.th }>{ this.props.index }</th>
                 <td style={ this.td }>{ this.props.value.message }</td>
                 <td style={ this.date }>{ this.props.value.created }</td>
-                <td><input type="button" onClick={ this.handleDelete } value="Delete!" /></td>
+
             </tr>
         );
     }

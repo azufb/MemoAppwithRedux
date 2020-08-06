@@ -4,6 +4,7 @@ import { findMemo } from './Store';
 
 class FindForm extends Component {
     input = {
+        width: "150px",
         fontSize: "14pt",
         color: "#006",
         padding: "0px"
