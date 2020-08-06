@@ -53,7 +53,7 @@ class Item extends Component {
         return (
             <tr>
                 <td style={ this.td }>{ this.props.value.message }</td>
-                <td style={ this.date }>{ this.props.created }</td>
+                <td style={ this.date }>{ this.props.value.created }</td>
                 <td><input type="button" onClick={ this.handleDelete } value="Delete!" /></td>
             </tr>
         );
