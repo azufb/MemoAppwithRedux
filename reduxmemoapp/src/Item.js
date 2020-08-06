@@ -4,39 +4,32 @@ import { connect } from 'react-redux';
 class Item extends Component {
 
     // 表示スタイルの設定
-    th = {
-        fontSize: "14pt",
-        backgroundColor: "blue",
-        color: "white",
-        padding: "5px 10px",
-        width: "50px"
-    }
-
-    td = {
-        fontSize: "14pt",
+    p1 = {
+        fontSize: "15pt",
         backgroundColor: "white",
         color: "darkblue",
         padding: "5px 10px",
         border: "1px solid lightblue",
-        minWidth: "300px"
+        minWidth: "300px",
+        wordBreak: "break-all"
     }
 
-    date = {
-        fontSize: "14pt",
+    p2 = {
+        fontSize: "15pt",
         backgroundColor: "white",
         color: "darkblue",
         padding: "5px 10px",
         border: "1px solid lightblue",
-        width: "80px"
+        width: "90px",
+        height: "30px"
     }
 
     render() {
         return (
-            <tr>
-                <th style={ this.th }>{ this.props.index }</th>
-                <td style={ this.td }>{ this.props.value.message }</td>
-                <td style={ this.date }>{ this.props.value.created }</td>
-            </tr>
+            <div className="disp">
+                <p style={ this.p1 }>{ this.props.value.message }</p>
+                <p style={ this.p2 }>{ this.props.value.created }</p>
+            </div>
         );
     }
 }
