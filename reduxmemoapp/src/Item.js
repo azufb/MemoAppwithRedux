@@ -50,13 +50,10 @@ class Item extends Component {
     }
 
     render() {
-        let d = this.props.value.created;
-        let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
-
         return (
             <tr>
                 <td style={ this.td }>{ this.props.value.message }</td>
-                <td style={ this.date }>{ f }</td>
+                <td style={ this.date }>{ this.props.created }</td>
                 <td><input type="button" onClick={ this.handleDelete } value="Delete!" /></td>
             </tr>
         );
