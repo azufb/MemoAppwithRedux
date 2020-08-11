@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { addMemo } from './Store';
 
 
-const InitialSelection = 'Work';
+const InitialSelection = 'Work'; // selectedの初期状態
 
 class AddForm extends Component {
     input = {
@@ -38,13 +38,13 @@ class AddForm extends Component {
 
     doSelected(e) {
         this.setState({
-            selected: e.target.value
+            selected: e.target.value //選択されたジャンルをselectedステートに設定。
         });
     }
 
     doAction(e) {
         e.preventDefault();
-        let action = addMemo(this.state.message, this.state.selected);
+        let action = addMemo(this.state.message, this.state.selected); // addと同時にジャンルの情報も送る！
         this.props.dispatch(action); // actionをレデューサーに送る。
         this.setState({
             message: ''
