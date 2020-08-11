@@ -29,6 +29,7 @@ function addReduce(state, action) {
     let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
     let data = {
         message: action.message,
+        selected: action.selected,
         created: f
     };
 
@@ -71,19 +72,15 @@ function findReduce(state, action) {
     };
 }
 
-// ジャンル選択のレデュース処理
-function selectionReduce(state, action) {
-
-}
-
 // アクションクリエーター作成。dispatchで引数として渡すアクションを作成。
 // そのままdispatchなどで送信され、レデューサーによってそれぞれの処理を実行する。
 
 // メモ追加のアクション
-export function addMemo(text) {
+export function addMemo(text, selected) {
     return {
         type: 'ADD',
-        message: text
+        message: text,
+        selected,
     }
 }
 
