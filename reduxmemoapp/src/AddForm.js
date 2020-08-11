@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addMemo } from './Store';
 
+
+const InitialSelection = 'Work'; // selectedの初期状態
+
 class AddForm extends Component {
     input = {
         fontSize: "16pt",
@@ -20,9 +23,10 @@ class AddForm extends Component {
         super(props);
         this.state = {
            message: '' ,
-           selected: 'Work'
+           selected: InitialSelection
         }
         this.doChange = this.doChange.bind(this);
+        this.doSelected = this.doSelected.bind(this);
         this.doAction = this.doAction.bind(this);
     }
 
@@ -33,16 +37,14 @@ class AddForm extends Component {
     }
 
     doSelected(e) {
-        let action = addMemo(this.state.selected);
-        this.props.dispatch(action);
         this.setState({
-            selected: e.target.value
+            selected: e.target.value //選択されたジャンルをselectedステートに設定。
         });
     }
 
     doAction(e) {
         e.preventDefault();
-        let action = addMemo(this.state.message);
+        let action = addMemo(this.state.message, this.state.selected); // addと同時にジャンルの情報も送る！
         this.props.dispatch(action); // actionをレデューサーに送る。
         this.setState({
             message: ''

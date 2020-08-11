@@ -32,7 +32,7 @@ class Memo extends Component {
             ));
         }
         return (
-            <table><tbody>{ data }</tbody></table>
+            <div>{ data }</div>
         );
     }
 }
