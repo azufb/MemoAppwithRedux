@@ -29,6 +29,7 @@ class Item extends Component {
             <div className="disp">
                 <p style={ this.p1 }>{ this.props.value.message }</p>
                 <p style={ this.p2 }>{ this.props.value.created }</p>
+                <p style={ this.p2 }>{ this.props.value.selected }</p>
             </div>
         );
     }
