@@ -1,40 +1,38 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Item from './Item';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import Item from './Item'
 
 class Memo extends Component {
-    // 表示部分の作成
-    render() {
-        let data;
-        let n = 0;
-        switch (this.props.mode) {
-            case 'default':
-            data = this.props.data.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ } />
-            ));
-            break;
+  // 表示部分の作成
+  render() {
+    let data
+    let n = 0
+    switch (this.props.mode) {
+      case 'default':
+        data = this.props.data.map((value) => (
+          <Item key={value.message} value={value} index={n++} />
+        ))
+        break
 
-            case 'find':
-            data = this.props.fdata.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ }  />
-            ));
-            break;
+      case 'find':
+        data = this.props.fdata.map((value) => (
+          <Item key={value.message} value={value} index={n++} />
+        ))
+        break
 
-            case 'delete':
-            data = this.props.data.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ }  />
-            ));
-            break;
+      case 'delete':
+        data = this.props.data.map((value) => (
+          <Item key={value.message} value={value} index={n++} />
+        ))
+        break
 
-            default:
-            data = this.props.data.map((value) => (
-                <Item key={ value.message } value={ value } index={ n++ } />
-            ));
-        }
-        return (
-            <table><tbody>{ data }</tbody></table>
-        );
+      default:
+        data = this.props.data.map((value) => (
+          <Item key={value.message} value={value} index={n++} />
+        ))
     }
+    return <div>{data}</div>
+  }
 }
 
-export default connect((state) => state)(Memo);
+export default connect((state) => state)(Memo)
