@@ -19,7 +19,8 @@ class AddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           message: '' 
+           message: '' ,
+           selected: 'Work'
         }
         this.doChange = this.doChange.bind(this);
         this.doAction = this.doAction.bind(this);
@@ -28,6 +29,14 @@ class AddForm extends Component {
     doChange(e) {
         this.setState({
             message: e.target.value // 入力されたテキストをmessageステートに設定。
+        });
+    }
+
+    doSelected(e) {
+        let action = addMemo(this.state.selected);
+        this.props.dispatch(action);
+        this.setState({
+            selected: e.target.value
         });
     }
 
@@ -47,7 +56,7 @@ class AddForm extends Component {
                 <form onSubmit={ this.doAction }>
                     <input type="text" size="40" onChange={ this.doChange }
                         style={ this.input } value={ this.state.message } required />
-                    <select>
+                    <select onChange={ this.doSelected }>
                         <option>Work</option>
                         <option>Vacation</option>
                         <option>Money</option>
