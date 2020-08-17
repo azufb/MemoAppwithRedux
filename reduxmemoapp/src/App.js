@@ -34,7 +34,7 @@ class App extends Component {
           </div>
         </MediaQuery>
 
-        <MediaQuery query='(max-width: 767px)'> 
+        <MediaQuery query='(min-width: 768px)'> 
           <div>
             <h1>タグメモ！</h1>
             <p　className="description">
