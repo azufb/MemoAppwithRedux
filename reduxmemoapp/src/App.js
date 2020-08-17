@@ -27,7 +27,7 @@ class App extends Component {
             </p>
             <AddForm />
             <div className="findAndDelete">
-              <span className="find" style='visibility:hidden;'><FindForm /></span>
+              <span className="find" visibility={this.state.showButton ? "visible": "hidden"}><FindForm /></span>
               <span className="delete"><DelForm /></span>
             </div>
             <Memo />
