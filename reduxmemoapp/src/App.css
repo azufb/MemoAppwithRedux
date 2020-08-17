@@ -41,3 +41,85 @@
   display: flex;
   word-wrap: break-word;
 }
+
+h1 {
+  margin-left: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.description {
+  margin-left: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.input {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+  color: #006;
+  padding: 0px;
+  margin: 5px 10px;
+}
+
+.select {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+}
+
+.addBtn {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+  color: #006;
+  padding: 2px 10px;
+}
+
+.findAndDelete {
+  display: flex;
+}
+
+.find {
+  margin: 5px 0px 5px 10px;
+}
+
+.findBtn {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+  color: #006;
+  padding-left: 1px 10px;
+}
+
+.delete {
+  margin: 5px 0px 5px 10px;
+  width: 300px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.deleteBtn {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+  color: #006;
+  padding: 1px 10px;
+}
+
+.memo {
+  margin-left: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  background-color: white;
+  color: darkblue;
+  padding: 10px;
+  border: 1px solid lightblue;
+  min-width: 300px;
+  word-break: break-all;
+}
+
+.memoP {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
+  background-color: white;
+  color: darkblue;
+  padding: 10px;
+  border: 1px solid lightblue;
+  min-width: 100px;
+  word-break: break-all;
+}

@@ -3,18 +3,6 @@ import { connect } from 'react-redux';
 import { findMemo } from './Store';
 
 class FindForm extends Component {
-    input = {
-        width: "150px",
-        fontSize: "14pt",
-        color: "#006",
-        padding: "0px"
-    }
-
-    btn = {
-        fontSize: "12pt",
-        color: "#006",
-        padding: "1px 10px"
-    }
 
     constructor(props) {
         super(props);
@@ -40,9 +28,9 @@ class FindForm extends Component {
     render() {
         return (
             <form onSubmit={ this.doAction }>
-                <input type="text" size="10" onChange={ this.doChange }
-                    style={ this.input } value={ this.state.message } />
-                <input type="submit" style={ this.btn } value="Find" />
+                <input className="input" type="text" size="10" onChange={ this.doChange }
+                    value={ this.state.message } />
+                <input className="findBtn" type="submit" value="検索" />
             </form>
         );
     }

@@ -2,23 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addMemo } from './Store';
 
-
 const InitialSelection = 'Work'; // selectedの初期状態
 
 class AddForm extends Component {
-    input = {
-        fontSize: "16pt",
-        color: "#006",
-        padding: "1px",
-        margin: "5px 0px"
-    }
-
-    btn = {
-        fontSize: "14pt",
-        color: "#006",
-        padding: "2px 10px"
-    }
-
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -54,16 +41,15 @@ class AddForm extends Component {
     render() {
         return (
             <div>
-                <p style={ this.message }>{ this.props.message }</p>
                 <form onSubmit={ this.doAction }>
-                    <input type="text" size="40" onChange={ this.doChange }
-                        style={ this.input } value={ this.state.message } required />
-                    <select onChange={ this.doSelected }>
+                    <input className="input" type="text" size="40" onChange={ this.doChange }
+                        value={ this.state.message } required />
+                    <select className="select" onChange={ this.doSelected }>
                         <option>Work</option>
                         <option>Vacation</option>
                         <option>Money</option>
                     </select>
-                    <input type="submit" style={ this.btn } value="Add" />
+                    <input className="addBtn" type="submit" value="追加" />
                 </form>
             </div>
         );
