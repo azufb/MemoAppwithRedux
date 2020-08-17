@@ -26,7 +26,7 @@ export function memoReducer(state = initData, action) {
 // メモ追加のレデュース処理
 function addReduce(state, action) {
     let d = new Date();
-    let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+    let f = d.getHours() + ':' + d.getMinutes();
     let data = {
         message: action.message,
         selected: action.selected,
@@ -37,7 +37,6 @@ function addReduce(state, action) {
     newData.unshift(data); // dataという連想配列をnewDataという連想配列の先頭に追加。
     return {
         data: newData, // dataが先頭に追加された後のnewData。
-        message: 'Added!',
         mode: 'default',
         fdata: []
     };
@@ -49,7 +48,7 @@ function deleteReduce(state, action) {
     newData.splice(action.index, 1); // // spliceは要素の削除・置き換え。
     return {
         data: newData,
-        message: 'Deleted!',
+        message: '',
         mode: 'delete',
         fdata: []
     };
@@ -66,7 +65,7 @@ function findReduce(state, action) {
     });
     return {
         data: state.data,
-        message: 'Find',
+        message: '',
         mode: 'find',
         fdata: fdata
     };

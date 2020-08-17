@@ -3,19 +3,6 @@ import { connect } from 'react-redux';
 import { deleteMemo } from './Store';
 
 class DelForm extends Component {
-    input = {
-        width: "150px",
-        fontSize: "14pt",
-        color: "#006",
-        padding: "1px",
-        margin: "5px 0px"
-    }
-
-    btn = {
-        fontSize: "10pt",
-        color: "#006",
-        padding: "2px 10px"
-    }
 
     constructor(props) {
         super(props);
@@ -50,11 +37,11 @@ class DelForm extends Component {
         return (
             <div>
                 <form onSubmit={ this.doAction }>
-                    <select onChange={ this.doChange }
-                        defaultValue="-1" style={ this.input }>
+                    <select className="input" onChange={ this.doChange }
+                        defaultValue="-1">
                         { items }
                     </select>
-                <input type="submit" style={ this.btn } value="Delete" />
+                <input className="deleteBtn" type="submit" value="削除" />
                 </form>
             </div>
         );

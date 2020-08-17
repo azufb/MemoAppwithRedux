@@ -7,6 +7,7 @@ import FindForm from './FindForm';
 import DelForm from './DelForm';
 
 class App extends Component {
+
   constructor(props) {
     // 複数のclassを扱う時は、必要。
     super(props);
@@ -15,13 +16,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Memo</h1>
+        <h1>タグメモ！</h1>
+        <p　className="description">タグメモ！を使うと、走り書きのようなメモの分類ができて、<br></br>
+          よくわからない謎の数字や文字がなくなり、分類を見ると、何のためのメモなのか、
+          わかりやすくなります！</p>
         <AddForm />
-        <hr />
-        <table><tbody><tr>
-          <td><FindForm /></td>
-          <td><DelForm /></td>
-        </tr></tbody></table>
+        <div className="findAndDelete">
+          <span className="find"><FindForm /></span>
+          <span className="delete"><DelForm /></span>
+        </div>
         <Memo />
       </div>
     );
