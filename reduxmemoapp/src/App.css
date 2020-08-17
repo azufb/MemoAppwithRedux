@@ -63,6 +63,7 @@ h1 {
 .select {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
+  margin-left: 10px;
 }
 
 .addBtn {
