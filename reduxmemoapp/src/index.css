@@ -17,4 +17,10 @@ code {
 
 footer {
   margin-top: auto;
+  margin-bottom: 0px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+footer p {
+  margin-bottom: 0px;
 }
