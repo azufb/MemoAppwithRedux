@@ -42,7 +42,7 @@ class AddForm extends Component {
         return (
             <div>
                 <form onSubmit={ this.doAction }>
-                    <input className="input" type="text" size="40" onChange={ this.doChange }
+                    <input className="input" type="text" size="20" onChange={ this.doChange }
                         value={ this.state.message } required />
                     <select className="select" onChange={ this.doSelected }>
                         <option>Work</option>
