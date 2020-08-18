@@ -20,15 +20,15 @@ class App extends Component {
         <MediaQuery query='(max-width: 767px)'>
           <div>
             <h1>タグメモ！</h1>
-            <p　className="description">
+            <p　className='description'>
               タグメモ！を使うと、走り書きのような<br></br>
               メモの分類ができ、よくわからない<br></br>
               謎の数字や文字が、分類を見ると、<br></br>
               何のメモなのか、わかりやすくなります！
             </p>
             <AddForm />
-            <div className="findAndDelete">
-              <span className="delete"><DelForm /></span>
+            <div className='findAndDelete'>
+              <span className='delete'><DelForm /></span>
             </div>
             <Memo />
           </div>
@@ -37,15 +37,15 @@ class App extends Component {
         <MediaQuery query='(min-width: 768px)'> 
           <div>
             <h1>タグメモ！</h1>
-            <p　className="description">
+            <p　className='description'>
               タグメモ！を使うと、走り書きのようなメモの分類ができて、<br></br>
               よくわからない謎の数字や文字がなくなり、分類を見ると、何のためのメモなのか、
               わかりやすくなります！
             </p>
             <AddForm />
-            <div className="findAndDelete">
-              <span className="find"><FindForm /></span>
-              <span className="delete"><DelForm /></span>
+            <div className='findAndDelete'>
+              <span className='find'><FindForm /></span>
+              <span className='delete'><DelForm /></span>
             </div>
             <Memo />
           </div>

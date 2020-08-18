@@ -41,15 +41,16 @@ class AddForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={ this.doAction }>
-                    <input className="input" type="text" size="20" onChange={ this.doChange }
+                <form className='addForm' onSubmit={ this.doAction }>
+                    <input className='input' type='text' size='20' onChange={ this.doChange }
                         value={ this.state.message } required />
-                    <select className="select" onChange={ this.doSelected }>
+                    <span className='selectTag'>分類タグ:</span>
+                    <select className='select' onChange={ this.doSelected }>
                         <option>Work</option>
                         <option>Vacation</option>
                         <option>Money</option>
                     </select>
-                    <input className="addBtn" type="submit" value="追加" />
+                    <input className='addBtn' type='submit' value='追加' />
                 </form>
             </div>
         );

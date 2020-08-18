@@ -37,11 +37,6 @@
   }
 }
 
-.disp {
-  display: flex;
-  word-wrap: break-word;
-}
-
 h1 {
   margin-left: 10px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -55,9 +50,14 @@ h1 {
 .input {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
-  color: #006;
+  color: black;
   padding: 0px;
   margin: 5px 10px;
+}
+
+.selectTag {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16pt;
 }
 
 .select {
@@ -69,8 +69,12 @@ h1 {
 .addBtn {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
-  color: #006;
+  color: darkblue;
   padding: 2px 10px;
+}
+
+.addBtn:hover, .addBtn:active {
+  background-color: lightblue;
 }
 
 .findAndDelete {
@@ -79,26 +83,41 @@ h1 {
 
 .find {
   margin: 5px 0px 5px 0px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: black;
 }
 
 .findBtn {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
-  color: #006;
+  color: darkblue;
   padding-left: 1px 10px;
+}
+
+.findBtn:hover, .findBtn:active {
+  background-color: lightblue;
 }
 
 .delete {
   margin: 5px 0px 5px 10px;
   width: 300px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: black;
 }
 
 .deleteBtn {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
-  color: #006;
+  color: darkblue;
   padding: 1px 10px;
+}
+
+.deleteBtn:hover, .deleteBtn:active {
+  background-color: lightblue;
+}
+
+.disp {
+  display: flex;
 }
 
 .memo {
@@ -107,11 +126,11 @@ h1 {
   font-size: 16pt;
   font-weight: bold;
   background-color: white;
-  color: darkblue;
+  color: black;
   padding: 10px;
   border: 1px solid lightblue;
   min-width: 300px;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .memoP {
@@ -122,5 +141,58 @@ h1 {
   padding: 10px;
   border: 1px solid lightblue;
   min-width: 100px;
-  word-break: break-all;
+}
+
+@media (max-width: 767px) {
+  .addForm {
+    display: flex;
+  }
+
+  .addBtn:hover, .addBtn:active {
+    background-color: lightblue;
+  }
+
+  .selectTag {
+    margin-left: 0px;
+  }
+
+  .findBtn:hover, .findBtn:active {
+    background-color: lightblue;
+  }
+
+  .deleteBtn:hover, .deleteBtn:active {
+    background-color: lightblue;
+  }
+
+  .disp {
+    display: block;
+    margin: 0px 10px 0px 10px;
+    border: 1px solid lightblue;
+  }
+
+  .memo {
+    margin: 0px 10px 0px 10px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    min-width: 200px;
+    word-wrap: break-word;
+  }
+
+  .memoP {
+    margin: 0px 10px 0px 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    color: darkblue;
+  }
+
 }
