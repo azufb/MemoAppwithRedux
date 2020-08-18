@@ -37,11 +37,11 @@ class DelForm extends Component {
         return (
             <div>
                 <form onSubmit={ this.doAction }>
-                    <select className="input" onChange={ this.doChange }
-                        defaultValue="-1">
+                    <select className='input' onChange={ this.doChange }
+                        defaultValue='-1'>
                         { items }
                     </select>
-                <input className="deleteBtn" type="submit" value="削除" />
+                <input className='deleteBtn' type='submit' value='削除' />
                 </form>
             </div>
         );

@@ -28,9 +28,9 @@ class FindForm extends Component {
     render() {
         return (
             <form onSubmit={ this.doAction }>
-                <input className="input" type="text" size="10" onChange={ this.doChange }
+                <input className='input' type='text' size='10' onChange={ this.doChange }
                     value={ this.state.message } />
-                <input className="findBtn" type="submit" value="検索" />
+                <input className='findBtn' type='submit' value='検索' />
             </form>
         );
     }
