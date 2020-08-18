@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -38,14 +27,21 @@
 }
 
 h1 {
-  margin-left: 10px;
+  margin-left: 0px;
+  padding-left: 10px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: lightskyblue;
 }
 
 .description {
   margin-left: 10px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+.submit {
+  display: flex;
+}
+
 
 .input {
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -74,7 +70,7 @@ h1 {
 }
 
 .addBtn:hover, .addBtn:active {
-  background-color: lightblue;
+  background-color: lightskyblue;
 }
 
 .findAndDelete {
@@ -95,7 +91,7 @@ h1 {
 }
 
 .findBtn:hover, .findBtn:active {
-  background-color: lightblue;
+  background-color: lightskyblue;
 }
 
 .delete {
@@ -113,7 +109,7 @@ h1 {
 }
 
 .deleteBtn:hover, .deleteBtn:active {
-  background-color: lightblue;
+  background-color: lightskyblue;
 }
 
 .disp {
@@ -125,10 +121,10 @@ h1 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
   font-weight: bold;
-  background-color: white;
+  background-color: lightskyblue;
   color: black;
   padding: 10px;
-  border: 1px solid lightblue;
+  border: 1px solid lightskyblue;
   min-width: 300px;
   word-wrap: break-word;
 }
@@ -136,34 +132,39 @@ h1 {
 .memoP {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16pt;
-  background-color: white;
+  background-color: lightskyblue;
   color: darkblue;
   padding: 10px;
-  border: 1px solid lightblue;
+  border: 1px solid lightskyblue;
   min-width: 100px;
 }
 
 @media (max-width: 767px) {
-  .addBtn:hover, .addBtn:active {
-    background-color: lightblue;
+  .submit {
+    display: block;
   }
 
   .selectTag {
-    margin-left: 0px;
+    margin-left: 10px;
+  }
+  
+  .addBtn:hover, .addBtn:active {
+    background-color: lightskyblue;
   }
 
   .findBtn:hover, .findBtn:active {
-    background-color: lightblue;
+    background-color: lightskyblue;
   }
 
   .deleteBtn:hover, .deleteBtn:active {
-    background-color: lightblue;
+    background-color: lightskyblue;
   }
 
   .disp {
     display: block;
     margin: 0px 10px 0px 10px;
-    border: 1px solid lightblue;
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
   }
 
   .memo {
@@ -171,7 +172,7 @@ h1 {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 16pt;
     font-weight: bold;
-    background-color: white;
+    background-color: lightskyblue;
     color: black;
     padding: 10px;
     border: none;
@@ -186,7 +187,7 @@ h1 {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 12pt;
     font-weight: bold;
-    background-color: white;
+    background-color:lightskyblue;
     border: none;
     color: darkblue;
   }
