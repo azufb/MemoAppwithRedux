@@ -41,7 +41,7 @@ class AddForm extends Component {
     render() {
         return (
             <div>
-                <form className='addForm' onSubmit={ this.doAction }>
+                <form onSubmit={ this.doAction }>
                     <input className='input' type='text' size='20' onChange={ this.doChange }
                         value={ this.state.message } required />
                     <span className='selectTag'>分類タグ:</span>
